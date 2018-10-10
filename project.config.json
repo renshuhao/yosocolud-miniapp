@@ -1,0 +1,17 @@
+{
+	"description": "优商云-小程序",
+	"setting": {
+		"urlCheck": false,
+		"es6": false,
+		"postcss": false,
+		"minified": false,
+		"newFeature": true,
+		"nodeModules": true
+	},
+	"compileType": "miniprogram",
+	"appid": "touristappid",
+	"projectname": "yosocolud-miniapp",
+	"miniprogramRoot": "dist/",
+	"libVersion": "2.2.3",
+	"condition": {}
+}

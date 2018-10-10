@@ -1,0 +1,90 @@
+<style lang="css">
+  @import "/components/vant/common/index.wxss";
+
+  .container {
+    background: #f9f9f9;
+    overflow: hidden;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 15px 0;
+  }
+
+  .container::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    content: ' ';
+    width: 100%;
+    height: 1rpx;
+    background-color: #e2e2e2;
+    z-index: 5;
+  }
+
+  .doc-title {
+    position: relative;
+    padding: 15px 0;
+    margin: 10px 15px;
+    line-height: 25px;
+    font-size: 25px;
+    color: #666;
+  }
+
+  .doc-description {
+    margin: 14px 0;
+    padding: 0 15px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #666;
+  }
+</style>
+
+<script>
+  import wepy from 'wepy'
+  import 'wepy-async-function'
+
+  export default class extends wepy.app {
+    config = {
+      pages: [
+        'pages/authorize',
+        'pages/home'
+      ],
+      window: {
+        navigationBarBackgroundColor: '#FAFAFA',
+        navigationBarTitleText: '优商云',
+        navigationBarTextStyle: 'black',
+        backgroundTextStyle: 'dark',
+        backgroundColor: '#f9f9f9'
+      },
+      tabBar: {
+        color: "#999999",
+        selectedColor: "#ff6a3c",
+        backgroundColor: "#ffffff",
+        borderStyle: "black",
+        list: [{
+          pagePath: "pages/home",
+          text: "首页",
+          iconPath: "",
+          selectedIconPath: ""
+        }, {
+          pagePath: "pages/home",
+          text: "首页",
+          iconPath: "",
+          selectedIconPath: ""
+        }]
+      },
+      debug: true
+    }
+
+    globalData = {}
+
+    constructor() {
+      super();
+      this.use('requestfix');
+      this.use('promisify');
+    }
+
+    async onLaunch(option) {
+
+    }
+  }
+</script>
